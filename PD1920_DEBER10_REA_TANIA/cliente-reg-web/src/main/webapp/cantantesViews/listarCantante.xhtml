@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Cantantes Registrados</title>
+</h:head>
+<h:body>
+	<h3>Lista de Cantantes</h3>
+	<h:form>
+		<h:dataTable value="#{cantanteM.listaSingers}" var="item">
+			<h:column>
+				<f:facet name="header">ID</f:facet>
+				<h:outputLabel value="#{item.id}"/>
+				</h:column>
+			<h:column>
+				<f:facet name="header">Nombre</f:facet>
+				<h:outputLabel value="#{item.first_name}"/>
+				</h:column>
+			<h:column>
+				<f:facet name="header">Apellido</f:facet>
+				<h:outputLabel value="#{item.last_name}"/>
+				</h:column>
+			<h:column>
+				<f:facet name="header">Fecha de Nacimiento</f:facet>
+				<h:outputLabel value="#{item.birth_date}"/>
+				</h:column>
+				<h:column>
+				<f:facet name="header">Version</f:facet>
+				<h:outputLabel value="#{item.version}"/>
+				</h:column>
+		</h:dataTable>
+	</h:form>
+</h:body>
+</html>

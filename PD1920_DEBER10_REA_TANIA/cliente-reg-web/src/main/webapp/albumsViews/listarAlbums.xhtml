@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Albums Registrados</title>
+</h:head>
+<h:body>
+	<h3>Lista de Albums</h3>
+	<h:form>
+		<h:dataTable value="#{albumM.listaAlbums}" var="item">
+			<h:column>
+				<f:facet name="header">ID</f:facet>
+				<h:outputLabel value="#{item.id}"/>
+				</h:column>
+			<h:column>
+				<f:facet name="header">Titulo</f:facet>
+				<h:outputLabel value="#{item.title}"/>
+				</h:column>
+			<h:column>
+				<f:facet name="header">ID del cantante</f:facet>
+				<h:outputLabel value="#{item.singer_id}"/>
+				</h:column>
+			<h:column>
+				<f:facet name="header">Fecha de lanzamiento</f:facet>
+				<h:outputLabel value="#{item.release_date}"/>
+				</h:column>
+				<h:column>
+				<f:facet name="header">Version</f:facet>
+				<h:outputLabel value="#{item.version}"/>
+				</h:column>
+		</h:dataTable>
+	</h:form>
+</h:body>
+</html>
